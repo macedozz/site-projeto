@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #f1f8e9);
+    color: #2e3c43;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-x: hidden;
+  }
+  
+  header {
+    text-align: center;
+    background-color: #00796b;
+    color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease;
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    font-size: 2em;
+    color: #004d40;
+    margin-bottom: 15px;
+    position: relative;
+  }
+  
+  h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #80cbc4;
+    margin-top: 5px;
+    border-radius: 2px;
+  }
+  
+  h3 {
+    font-size: 1.4em;
+    color: #00695c;
+    margin-top: 20px;
+  }
+  
+  .material {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    background-color: #ffffffdd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 96, 87, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .material:hover {
+    transform: translateY(-5px);
+  }
+  
+  .material img {
+    width: 90px;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  article {
+    background-color: #f0fdf4;
+    padding: 20px;
+    border-left: 6px solid #43a047;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(34, 139, 34, 0.1);
+    transition: background 0.3s ease;
+  }
+  
+  article:hover {
+    background-color: #e8f5e9;
+  }
+  
+  #painel table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  }
+  
+  #painel th,
+  #painel td {
+    border: 1px solid #c8e6c9;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  #painel th {
+    background-color: #66bb6a;
+    color: #fff;
+  }
+  
+  #educativo img {
+    width: 30%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #00796b;
+    color: white;
+    border-radius: 10px;
+    margin-top: 50px;
+    animation: fadeInUp 1s ease;
+  }
+  
+  @media (max-width: 768px) {
+    .material {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .material img {
+      width: 100%;
+    }
+  
+    #painel table,
+    #painel th,
+    #painel td {
+      font-size: 14px;
+    }
+  
+    #educativo img {
+      width: 100%;
+    }
+  }
+  
+  /* Animações suaves */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Detalhe decorativo animado: folhas caindo */
+  body::before {
+    content: "🍃";
+    position: fixed;
+    font-size: 24px;
+    top: -40px;
+    left: 50%;
+    animation: falling 5s infinite linear;
+    z-index: 0;
+  }
+  
+  @keyframes falling {
+    0% {
+      top: -40px;
+      transform: rotate(0deg);
+    }
+    100% {
+      top: 120%;
+      transform: rotate(360deg);
+    }
+  }
+  
